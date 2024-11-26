@@ -1,9 +1,8 @@
-from app import app
 import os
 
 import sqlalchemy as sa
 import sqlalchemy.orm as so
-from app import app
+from run import app
 
 app.config.from_object(os.environ['APP_SETTINGS'])
 
