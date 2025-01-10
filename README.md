@@ -1,6 +1,6 @@
 For launch\
-docker down\
-docker up --build\
+docker-compose down\
+docker-compose up --build\
 docker-compose run flask_app flask db upgrade
 
 
