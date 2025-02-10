@@ -1,0 +1,3 @@
+[flake8]
+exclude = site-packages, .git, __pycache__, build, dist, .venv, __init__.py
+max-line-length = 88
