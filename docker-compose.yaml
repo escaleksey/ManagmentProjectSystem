@@ -35,5 +35,11 @@ services:
       - "6379:6379"
     restart: always
 
+  frontend:
+    build:
+      context: ./frontend
+    ports:
+      - "3000:80"
+
 volumes:
   pgdata: {}
