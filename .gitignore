@@ -9,18 +9,6 @@ __pycache__/
 *.db
 
 
-frontend/node_modules
-frontend/dist
-frontend/dist-ssr
-frontend/*.log
-frontend/npm-debug.log*
-frontend/yarn-debug.log*
-frontend/yarn-error.log*
-frontend/pnpm-debug.log*
-frontend/lerna-debug.log*
-frontend/.vscode
-frontend/.DS_Store
-frontend/*.local
 
 *.suo
 *.ntvs*
