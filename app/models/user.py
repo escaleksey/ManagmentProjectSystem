@@ -18,6 +18,8 @@ class User(db.Model):
     email: orm.Mapped[str] = orm.mapped_column(sa.String(120), index=True, unique=True)
     _password_hash: orm.Mapped[Optional[str]] = orm.mapped_column(sa.String(256))
 
+    project_roles = orm.relationship("ProjectMemberRole", back_populates="user")
+
     def __repr__(self) -> str:
         return f"<User(username={self.username}, email={self.email})>"
 

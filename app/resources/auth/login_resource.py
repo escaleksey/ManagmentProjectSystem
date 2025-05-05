@@ -19,5 +19,5 @@ class LoginResource(Resource):
         if not user.check_password(password):
             return {"message": "Wrong password"}, 401
 
-        session["user_id"] = str(user.id).encode('utf-8')
+        session["user_id"] = user.id
         return {"message": "Login successful"}, 200

@@ -12,10 +12,12 @@ user_api.add_resource(UserListResource, "/users")
 
 @user_bp.route("/me")
 def get_current_user():
-    user_id = session.get("user_id")
+    user_id = int(session.get("user_id"))
     if not user_id:
         return {'message': 'User does not exist'}, 401
 
     user = requests.get(f"{USER_URL}/{user_id}")
+    print("STATUS CODE:", user.status_code)
+    print("TEXT:", user.text)
     return user.json()
 
